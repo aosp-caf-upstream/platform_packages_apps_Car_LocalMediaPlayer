@@ -38,6 +38,7 @@ LOCAL_SRC_FILES := $(call all-java-files-under, src)
 LOCAL_RESOURCE_DIR := $(LOCAL_PATH)/res
 
 LOCAL_PACKAGE_NAME := LocalMediaPlayer
+LOCAL_PRIVATE_PLATFORM_APIS := true
 
 LOCAL_CERTIFICATE := platform
 
@@ -52,7 +53,7 @@ LOCAL_STATIC_JAVA_LIBRARIES += \
 
 LOCAL_STATIC_ANDROID_LIBRARIES := \
         android-support-v4 \
-        android-support-design
+        $(ANDROID_SUPPORT_DESIGN_TARGETS)
 
 LOCAL_USE_AAPT2 := true
 
